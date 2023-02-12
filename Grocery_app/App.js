@@ -4,7 +4,9 @@ import Welcome from './src/components/Welcome'
 
 const App = () => {
   return (
-    <Welcome/>
+    <View>
+      <Welcome/>
+    </View>
   )
 }
 
