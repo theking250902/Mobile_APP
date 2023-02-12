@@ -5,8 +5,7 @@ import Welcome from './app/Welcome'
 const App = () => {
   return (
     <View>
-      <Text>Thấy cái code của t ko </Text>
-      <Text>phong 123</Text>
+      <Welcome/>
     </View>
   )
 }
