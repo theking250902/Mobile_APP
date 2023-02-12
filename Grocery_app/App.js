@@ -4,7 +4,8 @@ import React from 'react'
 const App = () => {
   return (
     <View>
-      <Text>App</Text>
+      <Text>Thấy cái code của t ko </Text>
+      <Text>phong 123</Text>
     </View>
   )
 }
