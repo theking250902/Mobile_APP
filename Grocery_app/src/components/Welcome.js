@@ -4,10 +4,10 @@ import React from 'react'
 const Welcome = () => {
   return (
     <View style={styles.container}>
-        <Image style={styles.image} source={require('./image/Illustration.png')}/>
+        <Image style={styles.image} source={require('../image/Illustration.png')}/>
         <Text style={styles.txt_realax}>Realax and shop</Text>
         <View style={styles.text}>
-            <Text style={styles.text}>Shop online and get grocories</Text>
+            <Text style={styles.text}>Shop online and get grocories.</Text>
             <Text style={styles.text}>delivered from stores to your home</Text>
             <Text style={styles.text}> in as fast as 1 hour .</Text>
         </View>
