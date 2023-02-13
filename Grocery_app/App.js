@@ -1,12 +1,12 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import {Text, View} from 'react-native';
 
 const App = () => {
   return (
     <View>
-      <Text>App</Text>
+      <Text>Lamdz</Text>
     </View>
-  )
-}
+  );
+};
 
-export default App
+export default App;
