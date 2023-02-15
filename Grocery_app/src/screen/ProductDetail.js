@@ -5,13 +5,13 @@ const ProductDetail = () => {
   return (
     <View style={styles.container}>
        <StatusBar
-       barStyle={'light-content'}
+       barStyle={'dark-content'}
        translucent={true}
        backgroundColor={'transparent'}
        >
         
         </StatusBar> 
-      <View>
+      <View style={styles.headerView}>
             <Image source={require('../image/Left_Arrow.png')}></Image>
       </View>
     </View>
@@ -27,5 +27,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#FFFFFF',
         flex:1
     },
-    
+    headerView:{
+        marginTop:64
+    }
 })
