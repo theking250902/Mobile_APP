@@ -1,11 +1,119 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
+import Screen1 from './Screen1'
+import Screen2 from './Screen2'
+import Screen3 from './Screen3'
+import Screen4 from './Screen4'
+import Screen5 from './Screen5'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tab = createBottomTabNavigator();
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <NavigationContainer>
+            <Tab.Navigator
+                screenOptions={({ route }) => ({
+                    tabBarIcon: ({ focused }) => {
+                        if (route.name == "Shop") {
+                            if (focused) {
+                                return <Image source={require('./src/media/images/ic_shop1.png')} />;
+                            }
+                            else {
+                                return <Image source={require('./src/media/images/ic_shop.png')} />;
+                            }
+                        }
+                        else if (route.name == "Explore") {
+                            if (focused) {
+                                return <Image source={require('./src/media/images/ic_explore1.png')} />;
+                            }
+                            else {
+                                return <Image source={require('./src/media/images/ic_explore.png')} />;
+                            }
+                        }
+                        if (route.name == "Cart") {
+                            if (focused) {
+                                return <Image source={require('./src/media/images/ic_cart1.png')} />;
+                            }
+                            else {
+                                return <Image source={require('./src/media/images/ic_cart.png')} />;
+                            }
+                        }
+                        else if (route.name == "Favorite") {
+                            if (focused) {
+                                return <Image source={require('./src/media/images/ic_favorite1.png')} />;
+                            }
+                            else {
+                                return <Image source={require('./src/media/images/ic_favorite.png')} />;
+                            }
+                        }
+                        else if (route.name == "Account") {
+                          if (focused) {
+                              return <Image source={require('./src/media/images/ic_account1.png')} />;
+                          }
+                          else {
+                              return <Image source={require('./src/media/images/ic_account.png')} />;
+                          }
+                      }
+                    },
+                    tabBarLabel: ({ focused }) => {
+                        if (route.name == 'Shop') {
+                            if (focused) {
+                                return <Text style={{ color: '#FF5E00', fontWeight: 'bold' }}>Shop</Text>
+                            }
+                            else {
+                                return <Text style={{ color: '#6D3805' }}>Shop</Text>
+                            }
+                        }
+                        else if (route.name == 'Explore') {
+                            if (focused) {
+                                return <Text style={{ color: '#FF5E00', fontWeight: 'bold' }}>Explore</Text>
+                            }
+                            else {
+                                return <Text style={{ color: '#6D3805' }}>Explore</Text>
+                            }
+                        }
+                        if (route.name == 'Cart') {
+                            if (focused) {
+                                return <Text style={{ color: '#FF5E00', fontWeight: 'bold' }}>Cart</Text>
+                            }
+                            else {
+                                return <Text style={{ color: '#6D3805' }}>Cart</Text>
+                            }
+                        }
+                        else if (route.name == 'Favorite') {
+                            if (focused) {
+                                return <Text style={{ color: '#FF5E00', fontWeight: 'bold' }}>Favorite</Text>
+                            }
+                            else {
+                                return <Text style={{ color: '#6D3805' }}>Favorite</Text>
+                            }
+                        }
+                        else if (route.name == 'Account') {
+                          if (focused) {
+                              return <Text style={{ color: '#FF5E00', fontWeight: 'bold' }}>Account</Text>
+                          }
+                          else {
+                              return <Text style={{ color: '#6D3805' }}>Account</Text>
+                          }
+                      }
+                    },
+                    headerShown: false
+                })
+                }
+            >
+                <Tab.Screen name="Shop" component={Screen1} />
+                <Tab.Screen name="Explore" component={Screen2} />
+                <Tab.Screen name="Cart" component={Screen3} />
+                <Tab.Screen name="Favorite" component={Screen4} />
+                <Tab.Screen name="Account" component={Screen5} />
+                {/* <Tab.Screen name="Orders" component={Orders} /> */}
+            </Tab.Navigator>
+        </NavigationContainer>
   )
 }
 
