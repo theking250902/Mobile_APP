@@ -42,7 +42,7 @@ const Shop = (props) => {
       />
 
       </View>
-
+      <Text></Text>
     </View>
   )
 }
