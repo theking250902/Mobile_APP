@@ -1,30 +1,46 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native'
 import React from 'react'
+import { Swipeable, GestureHandlerRootView } from 'react-native-gesture-handler';
 
-const CartItem = () => {
+const rightSwipe = () => {
     return (
-        <View style={styles.container}>
-            <View style={styles.imgView}>
-                <Image source={require('../image/strawberry.png')} />
-            </View>
-            <View style={styles.centerView}>
-                <Text style={styles.productName}>Strawberry</Text>
-                <View style={styles.controlView}>
-                    <TouchableOpacity style={styles.btnUpDown}>
-                        <Text style={styles.textBtn}>-</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.quantityText}>2</Text>
-                    <TouchableOpacity style={styles.btnUpDown}>
-                        <Text style={styles.textBtn}>+</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
-            <View  style={styles.priceView}>
-                <Text style={styles.priceText}>$24</Text>
-                <Text style={styles.unit}>st</Text>
-            </View>
+        <TouchableOpacity style={styles.swipeView}>
+             <Image source={require('../image/btnDel.png')} />
+        </TouchableOpacity>
+    )
 
-        </View>
+}
+const CartItem = () => {
+
+
+
+    return (
+        <GestureHandlerRootView>
+            <Swipeable renderRightActions={rightSwipe}>
+                <View style={styles.container}>
+                    <View style={styles.imgView}>
+                        <Image source={require('../image/strawberry.png')} />
+                    </View>
+                    <View style={styles.centerView}>
+                        <Text style={styles.productName}>Strawberry</Text>
+                        <View style={styles.controlView}>
+                            <TouchableOpacity style={styles.btnUpDown}>
+                                <Text style={styles.textBtn}>-</Text>
+                            </TouchableOpacity>
+                            <Text style={styles.quantityText}>2</Text>
+                            <TouchableOpacity style={styles.btnUpDown}>
+                                <Text style={styles.textBtn}>+</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                    <View style={styles.priceView}>
+                        <Text style={styles.priceText}>$24</Text>
+                        <Text style={styles.unit}>st</Text>
+                    </View>
+
+                </View>
+            </Swipeable>
+        </GestureHandlerRootView>
     )
 }
 
@@ -36,7 +52,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderColor: '#6D380520',
         flexDirection: 'row',
-
+        flex: 1
     },
     imgView: {
         width: 100,
@@ -76,13 +92,15 @@ const styles = StyleSheet.create({
         height: 25,
         backgroundColor: '#FFFFFF',
         borderRadius: 99,
-        elevation: 5
+        borderColor: '#6D380510',
+        borderWidth: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     textBtn: {
         color: '#6D3805',
-        fontSize: 17,
-        fontWeight: '600',
-        textAlign: 'center'
+        fontSize: 16,
+        fontWeight: '700',
     },
     quantityText: {
         color: '#6D3805',
@@ -94,19 +112,26 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '400',
         fontFamily: 'Klarna Text',
-        marginEnd:10
+        marginEnd: 10
     },
     unit: {
         color: '#6D3805',
         fontSize: 12,
         fontWeight: '400',
         fontFamily: 'Klarna Text',
-        top:6
+        top: 6
     },
-    priceView:{
-        flexDirection:'row',
-        top:60,
-        start:30
+    priceView: {
+        flexDirection: 'row',
+        top: 60,
+        start: 30
+    },
+    swipeView: {
+        width: 70,
+        height: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#A42B32'
     }
 
 })

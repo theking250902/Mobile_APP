@@ -12,7 +12,9 @@
   "dependencies": {
     "@shopify/flash-list": "^1.4.1",
     "react": "18.1.0",
-    "react-native": "0.70.6"
+    "react-native": "0.70.6",
+    "react-native-gesture-handler": "^2.9.0",
+    "react-native-swipeable": "^0.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
