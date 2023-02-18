@@ -1,13 +1,13 @@
-import { StyleSheet, Text, View, Image, Pressable, FlatList } from 'react-native'
+import { StyleSheet, Text, View, Image, Pressable, FlatList, Touchable, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const Itemes = () => {
     const renderItem = (props) => {
-        const {item} = props;
-        const {name, quantity, price, image} = item;
-        return(
-            
-            <View style={{
+        const { item } = props;
+        const { name, quantity, price, image } = item;
+        return (
+
+            <TouchableOpacity style={{
                 backgroundColor: '#ffffff',
                 width: 393,
                 height: 110,
@@ -15,69 +15,36 @@ const Itemes = () => {
                 borderBottomColor: '#E5E5E5',
                 borderBottomWidth: 1,
             }}>
-               
-                <Image
-                    style={{
-                        width: 80,
-                        height: 80,
-                        top: 10,
-                        left: 22,
-                    }}
-                    source={{uri: image}}
+
+                <Image style={{ width: 80, height: 80, top: 10, left: 22, }}
+                    source={{ uri: image }}
                 />
                 <Text style={{
-                    fontWeight: '700',
-                    fontSize: 18,
-                    color: '#6D3805',
-                    left: 114,
-                    bottom: 60,
+                    fontWeight: '700', fontSize: 18, color: '#6D3805', left: 114, bottom: 60,
                 }}>{name}</Text>
                 <View style={{
-                    backgroundColor: '#F4F4F4',
-                    width: 98,
-                    height: 32,
-                    alignSelf: 'center',
-                    bottom: 40,
-                    borderRadius: 30,
+                    backgroundColor: '#F4F4F4', width: 98, height: 32, alignSelf: 'center', bottom: 40, borderRadius: 30,
                 }}>
                     <Pressable style={{
-                        backgroundColor: '#FFFFFF',
-                        width: 25,
-                        height: 25,
-                        borderRadius: 30,
-                        top: 3,
-                        left: 5,
+                        backgroundColor: '#FFFFFF', width: 25, height: 25, borderRadius: 30, top: 3, left: 5,
                     }}>
-                        <Text style={{fontSize: 30, bottom: 10, left: 8, color: '#000000'}}>-</Text>
+                        <Text style={{ fontSize: 30, bottom: 10, left: 8, color: '#000000' }}>-</Text>
                     </Pressable>
                     <Text style={{
-                        alignSelf: 'center',
-                        bottom:20,
-                        fontWeight: '400',
-                        color: '#6D3805',
+                        alignSelf: 'center', bottom: 20, fontWeight: '400', color: '#6D3805',
                     }}>{quantity}</Text>
                     <Pressable style={{
-                        backgroundColor: '#FFFFFF',
-                        width: 25,
-                        height: 25,
-                        borderRadius: 30,
-                        top: -40.5,
-                        left: 69,
+                        backgroundColor: '#FFFFFF', width: 25, height: 25, borderRadius: 30, top: -40.5, left: 69,
                     }}>
-                        <Text style={{fontSize: 25, bottom: 6, left: 5, color: '#000000'}}>+</Text>
+                        <Text style={{ fontSize: 25, bottom: 6, left: 5, color: '#000000' }}>+</Text>
                     </Pressable>
                 </View>
                 <Text style={{
-                    color: '#6D3805',
-                    fontWeight: '400',
-                    fontFamily: 'Klarna Text',
-                    fontSize: 18,
-                    left: 296,
-                    bottom: 67,
+                    color: '#6D3805', fontWeight: '400', fontFamily: 'Klarna Text', fontSize: 18, left: 296, bottom: 67,
                 }}>{price}</Text>
-            </View>
+            </TouchableOpacity>
         )
-        
+
     }
     return (
         <View style={{
@@ -103,75 +70,7 @@ const Itemes = () => {
                 color: '#FF5E00'
             }}>Itemes</Text>
             {/* item */}
-            <View style={{
-                backgroundColor: '#ffffff',
-                width: 393,
-                height: 110,
-                right: 24,
-                borderBottomColor: '#E5E5E5',
-                borderBottomWidth: 1,
-            }}>
-
-                <Image
-                    style={{
-                        width: 80,
-                        height: 80,
-                        top: 10,
-                        left: 22,
-                    }}
-                    source={require('../../../../media/images/itemes/tao.jpg')}
-                />
-                <Text style={{
-                    fontWeight: '700',
-                    fontSize: 18,
-                    color: '#6D3805',
-                    left: 114,
-                    bottom: 60,
-                }}>Red Apple</Text>
-                <View style={{
-                    backgroundColor: '#F4F4F4',
-                    width: 98,
-                    height: 32,
-                    alignSelf: 'center',
-                    bottom: 40,
-                    borderRadius: 30,
-                }}>
-                    <Pressable style={{
-                        backgroundColor: '#FFFFFF',
-                        width: 25,
-                        height: 25,
-                        borderRadius: 30,
-                        top: 3,
-                        left: 5,
-                    }}>
-                        <Text style={{fontSize: 30, bottom: 10, left: 8, color: '#000000'}}>-</Text>
-                    </Pressable>
-                    <Text style={{
-                        alignSelf: 'center',
-                        bottom:20,
-                        fontWeight: '400',
-                        color: '#6D3805',
-                    }}>1</Text>
-                    <Pressable style={{
-                        backgroundColor: '#FFFFFF',
-                        width: 25,
-                        height: 25,
-                        borderRadius: 30,
-                        top: -40.5,
-                        left: 69,
-                    }}>
-                        <Text style={{fontSize: 25, bottom: 6, left: 5, color: '#000000'}}>+</Text>
-                    </Pressable>
-                </View>
-                <Text style={{
-                    color: '#6D3805',
-                    fontWeight: '400',
-                    fontFamily: 'Klarna Text',
-                    fontSize: 18,
-                    left: 296,
-                    bottom: 67,
-                }}>$4,99 kg</Text>
-            </View>
+            
             <FlatList
                 data={data}
                 renderItem={renderItem}
@@ -179,7 +78,7 @@ const Itemes = () => {
                 showsVerticalScrollIndicator={false}
             >
             </FlatList>
-            
+
 
         </View>
     )
@@ -202,23 +101,23 @@ var data = [
         "name": "Orginal Banana",
         "quantity": "2",
         "price": "$5,99 kg",
-        "image": "https://fruityland.co/wp-content/uploads/2021/02/Red-Delicious-FL.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwVkQK0u6PFZL7RrsjHitIIaAC461koXcjnw&usqp=CAU",
     },
-    
+
     {
         "id": "03",
         "name": "Avocado Bowl",
         "quantity": "1",
         "price": "$24 st",
-        "image": "https://fruityland.co/wp-content/uploads/2021/02/Red-Delicious-FL.jpg",
+        "image": "https://benhvienthucuc.vn/wp-content/uploads/2020/02/an-bo-nhieu-co-beo-khong.jpg",
     },
-    
+
     {
         "id": "04",
         "name": "Salmon",
         "quantity": "2",
         "price": "$50 kg",
-        "image": "https://fruityland.co/wp-content/uploads/2021/02/Red-Delicious-FL.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA2zOA2Q1aqCnjwGW7Ylb33tkiIh3dWbhmP-i1P_A8WY-SxPcKlA-L0tJDjCvJ5RQQI8A&usqp=CAU",
     },
     {
         "id": "04",
@@ -241,7 +140,7 @@ var data = [
         "price": "$4,9 kg",
         "image": "https://fruityland.co/wp-content/uploads/2021/02/Red-Delicious-FL.jpg",
     },
-    
-    
-    
+
+
+
 ]

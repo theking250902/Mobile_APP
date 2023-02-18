@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View,Image, Pressable } from 'react-native'
 import React from 'react'
 
-const OrderFailed = () => {
+const OrderFailed = (props) => {
+  const {navigation} = props;
   return (
     <View style={styles.container}>
       <Image
@@ -23,13 +24,7 @@ const OrderFailed = () => {
         fontFamily: 'Klarna Text',
         top: 97,
       }}>Something went terribly wrong</Text>
-      <Pressable style={{
-        width: '100%',
-        height: 50,
-        borderRadius: 30,
-        backgroundColor: '#FF5E00',
-        alignItems: 'center',
-        top: 150,
+      <Pressable onPress={() => navigation.navigate("A")} style={{ width: '100%', height: 50,borderRadius: 30,backgroundColor: '#FF5E00',alignItems: 'center',top: 150,
         
       }}>
         <Text style={{
@@ -39,7 +34,7 @@ const OrderFailed = () => {
             color:'#ffffffff',
             }}>Try again</Text>
       </Pressable>
-      <Pressable style={{
+      <Pressable  style={{
         width: '100%',
         height: 50,
         borderRadius: 30,
