@@ -1,10 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import Register1 from './src/screens/Register1'
+import Shop from './src/screens/Shop'
+import Navigation from './src/navigation/Navigation'
 
 const App = () => {
   return (
-   <Register1></Register1>
+   <Shop></Shop>
   )
 }
 

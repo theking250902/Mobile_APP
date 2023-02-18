@@ -1,7 +1,11 @@
 import { StyleSheet, Text, View, Image, TextInput, Pressable, Button } from 'react-native'
 import React from 'react'
 
-const Register1 = () => {
+const Register1 = (props) => {
+
+    const { navigation } = props;
+
+
     return (
         <View style={styles.container}>
 
@@ -25,14 +29,18 @@ const Register1 = () => {
 
                 <TextInput style={styles.numberPhone} placeholder='Number Phone'></TextInput>
             </View>
-           
+
             <Text style={styles.detail}> We need to verify you. We will send you a one time verification code. </Text>
             <View style={styles.buttom1}>
-                <Pressable style={styles.button}><Text style={styles.buttomSI}>Next</Text></Pressable>
+                <Pressable style={styles.button}
+                    onPress={() => navigation.navigate('Register2')}>
+                    <Text style={styles.buttomSI}>Next</Text>
+                </Pressable>
             </View>
-            <View  style={styles.textDS}>
+            <View style={styles.textDS}>
                 <Text style={styles.textDon}>Don’t have an account?</Text>
-                <Text style={styles.textSU}> Sign Up</Text>
+                <Text style={styles.textSU}
+                    onPress={() => navigation.navigate('Login')}> Sign Up</Text>
             </View>
 
             <View style={styles.line}>
@@ -49,18 +57,18 @@ export default Register1
 
 const styles = StyleSheet.create({
 
-    line:{
-        top:50,
-        alignItems:'center',
+    line: {
+        top: 50,
+        alignItems: 'center',
     },
-    textSU:{
-        color:'#FF5E00',
+    textSU: {
+        color: '#FF5E00',
     },
-    textDon:{},
-    textDS:{
-        top:13,
-        flexDirection:'row',
-        left:100,
+    textDon: {},
+    textDS: {
+        top: 13,
+        flexDirection: 'row',
+        left: 100,
     },
 
     buttomSI: {
@@ -115,7 +123,7 @@ const styles = StyleSheet.create({
 
     },
     inPassword: {
-        width:200,
+        width: 200,
         color: '#AC8E71'
     },
 
@@ -148,7 +156,7 @@ const styles = StyleSheet.create({
         left: '4.27%',
         right: '4.27%',
         bottom: 50,
-        width:330,
+        width: 330,
         fontWeight: '350',
         fontSize: 16,
         lineHeight: 26,

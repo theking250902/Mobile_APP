@@ -1,8 +1,12 @@
 import { StyleSheet, Text, View, Image, TextInput, Pressable, Button } from 'react-native'
 import React from 'react'
 
-const Login = () => {
+const Login = (props) => {
+    const {navigation} = props;
     return (
+
+        
+        
         <View style={styles.container}>
 
             <Image source={require('../../image/tenTrai.png')} style={styles.imageTren} ></Image>
@@ -46,7 +50,9 @@ const Login = () => {
 
 
             <View style={styles.buttom1}>
-                <Pressable style={styles.button}><Text style={styles.buttomSI}>Next</Text></Pressable>
+                <Pressable style={styles.button} onPress={() => navigation.navigate('Register3')}>
+                    <Text style={styles.buttomSI}>Next</Text>
+                </Pressable>
             </View>
 
 
@@ -65,8 +71,8 @@ export default Login
 
 const styles = StyleSheet.create({
 
-    icon1:{
-        marginTop:40
+    icon1: {
+        marginTop: 40
     },
 
     detailBot: {

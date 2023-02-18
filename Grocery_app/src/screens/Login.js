@@ -1,7 +1,10 @@
 import { StyleSheet, Text, View, Image, TextInput, Pressable, Button } from 'react-native'
-import React from 'react'
+import React,{useState} from 'react'
 
-const Login = () => {
+const Login = (props) => {
+
+   const {navigation} = props;
+
     return (
         <View style={styles.container}>
 
@@ -32,11 +35,13 @@ const Login = () => {
             </View>
             <Text style={styles.FP}> Forgote Password</Text>
             <View style={styles.buttom1}>
-                <Pressable style={styles.button}><Text style={styles.buttomSI}>Sign in</Text></Pressable>
+                <Pressable style={styles.button}><Text style={styles.buttomSI}  >Sign in</Text></Pressable>
             </View>
             <View  style={styles.textDS}>
                 <Text style={styles.textDon}>Don’t have an account?</Text>
-                <Text style={styles.textSU}> Sign Up</Text>
+
+                <Text style={styles.textSU}
+                 onPress={() => navigation.navigate('Register1')} > Sign Up</Text>
             </View>
 
             <View style={styles.line}>

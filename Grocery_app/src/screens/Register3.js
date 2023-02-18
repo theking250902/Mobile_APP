@@ -1,7 +1,10 @@
 import { StyleSheet, Text, View, Image, TextInput, Pressable, Button } from 'react-native'
 import React from 'react'
 
-const Login = () => {
+const Login = (props) => {
+
+    const { navigation } = props;
+
     return (
         <View style={styles.container}>
 
@@ -14,19 +17,21 @@ const Login = () => {
                     046 XXX XX XX</Text>
             </View>
 
-            <View style={styles.forLine}>
-            <Image source={require('../../image/Line2.png')} style={styles.image4} resizeMode='cover' ></Image>
-            <Image source={require('../../image/Line2.png')} style={styles.image4} resizeMode='cover' ></Image>
-            <Image source={require('../../image/Line2.png')} style={styles.image4} resizeMode='cover' ></Image>
-            <Image source={require('../../image/Line2.png')} style={styles.image4} resizeMode='cover' ></Image>
-            <Image source={require('../../image/Line2.png')} style={styles.image4} resizeMode='cover' ></Image>
+            <View style={styles.forLine} >
+                <TextInput style={styles.forLine1}> <Text style={styles.text}></Text></TextInput>
+                <TextInput style={styles.forLine1}><Text style={styles.text}></Text></TextInput>
+                <TextInput style={styles.forLine1}><Text style={styles.text}></Text></TextInput>
+                <TextInput style={styles.forLine1}><Text style={styles.text}></Text></TextInput>
+                <TextInput style={styles.forLine1}><Text style={styles.text}></Text></TextInput>
 
             </View>
 
 
 
             <View style={styles.buttom1}>
-                <Pressable style={styles.button}><Text style={styles.buttomSI}>Sign Up</Text></Pressable>
+                <Pressable style={styles.button} onPress={() => navigation.navigate('Login')}>
+                    <Text style={styles.buttomSI} >Sign Up</Text>
+                </Pressable>
             </View>
 
 
@@ -45,10 +50,24 @@ export default Login
 
 const styles = StyleSheet.create({
 
-    forLine:{
-        marginTop:57,
-        flexDirection:'row',
-        justifyContent:'space-evenly'
+    text:{
+        alignItems:'center',
+        
+        fontSize:51,
+        fontWeight:'500',
+
+
+    },
+
+    forLine1: {
+        width :50,
+       borderBottomWidth :3,
+       borderBottomColor: '#7F4E1D',
+    },
+    forLine: {
+        marginBottom:15,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly'
     },
 
     icon1: {
@@ -73,7 +92,7 @@ const styles = StyleSheet.create({
     },
 
     line: {
-        marginTop:65,
+        marginTop: 65,
         alignItems: 'center',
     },
     textSU: {
@@ -101,7 +120,7 @@ const styles = StyleSheet.create({
     button: {
         width: 343,
         height: 48,
-        marginTop:25,
+        marginTop: 25,
         backgroundColor: '#FF5E00',
         borderRadius: 30,
         padding: 12,
