@@ -8,7 +8,7 @@ import OrderSuccessful from '../sales/screens/OrderSuccessful';
 const Tab = createBottomTabNavigator();
 const SaleNavigation = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{headerShown: false}}>
         <Tab.Screen name='Itemes' component={Itemes}/>
         <Tab.Screen name='Payment02' component={Payment02}/>
         <Tab.Screen name='OrderFailed' component={OrderFailed}/>

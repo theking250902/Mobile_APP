@@ -20,7 +20,7 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{headerShown: false}}>
         <Tab.Screen name='Itemes' component={OrderNavigation} />
         <Tab.Screen name='Payment02' component={UnOrderNavigation} />
         <Tab.Screen name='OrderFailed' component={Itemes} />

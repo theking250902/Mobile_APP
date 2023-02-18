@@ -7,7 +7,7 @@ import A from '../screens/A';
 const Stack = createNativeStackNavigator();
 const OrderNavigation = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown:false}}>
         <Stack.Screen name='OrderFailed' component={OrderFailed}/>
         <Stack.Screen name='A' component={A}/>
     </Stack.Navigator>
