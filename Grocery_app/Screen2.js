@@ -3,8 +3,8 @@ import React from 'react'
 
 const Screen2 = () => {
   return (
-    <View>
-      <Text>Screen2</Text>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
+      <Text style={{fontSize: 18, color: '#000', fontWeight: 'bold'}}>Screen2</Text>
     </View>
   )
 }

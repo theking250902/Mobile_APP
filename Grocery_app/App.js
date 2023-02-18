@@ -8,14 +8,26 @@ import Screen5 from './Screen5'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Profile from './Profile'
+import Orders from './Orders'
 
 const Tab = createBottomTabNavigator();
 
 const Stack = createStackNavigator();
 
+const StackAccount = () => {
+    return (
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+            <Stack.Screen name="Screen5" component={Screen5} />
+            <Stack.Screen name="Orders" component={Orders} />
+            <Stack.Screen name="Profile" component={Profile} />
+        </Stack.Navigator>
+    )
+}
+
 const App = () => {
-  return (
-    <NavigationContainer>
+    return (
+        <NavigationContainer>
             <Tab.Navigator
                 screenOptions={({ route }) => ({
                     tabBarIcon: ({ focused }) => {
@@ -52,13 +64,13 @@ const App = () => {
                             }
                         }
                         else if (route.name == "Account") {
-                          if (focused) {
-                              return <Image source={require('./src/media/images/ic_account1.png')} />;
-                          }
-                          else {
-                              return <Image source={require('./src/media/images/ic_account.png')} />;
-                          }
-                      }
+                            if (focused) {
+                                return <Image source={require('./src/media/images/ic_account1.png')} />;
+                            }
+                            else {
+                                return <Image source={require('./src/media/images/ic_account.png')} />;
+                            }
+                        }
                     },
                     tabBarLabel: ({ focused }) => {
                         if (route.name == 'Shop') {
@@ -94,13 +106,13 @@ const App = () => {
                             }
                         }
                         else if (route.name == 'Account') {
-                          if (focused) {
-                              return <Text style={{ color: '#FF5E00', fontWeight: 'bold' }}>Account</Text>
-                          }
-                          else {
-                              return <Text style={{ color: '#6D3805' }}>Account</Text>
-                          }
-                      }
+                            if (focused) {
+                                return <Text style={{ color: '#FF5E00', fontWeight: 'bold' }}>Account</Text>
+                            }
+                            else {
+                                return <Text style={{ color: '#6D3805' }}>Account</Text>
+                            }
+                        }
                     },
                     headerShown: false
                 })
@@ -110,11 +122,10 @@ const App = () => {
                 <Tab.Screen name="Explore" component={Screen2} />
                 <Tab.Screen name="Cart" component={Screen3} />
                 <Tab.Screen name="Favorite" component={Screen4} />
-                <Tab.Screen name="Account" component={Screen5} />
-                {/* <Tab.Screen name="Orders" component={Orders} /> */}
+                <Tab.Screen name="Account" component={StackAccount}/>
             </Tab.Navigator>
         </NavigationContainer>
-  )
+    )
 }
 
 export default App
