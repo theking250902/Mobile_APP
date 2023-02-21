@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     btn_in:{
         borderColor:'#FF5E00',
         borderRadius:30,
-        borderWidth:1,
+        borderWidth:1 ,
         width:343,
         height:50,
         alignItems:'center',
