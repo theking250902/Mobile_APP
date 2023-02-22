@@ -1,7 +1,19 @@
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image, TouchableHighlight, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { GestureHandlerRootView, Swipeable } from 'react-native-gesture-handler'
 
 const Screen4 = () => {
+
+  const rightSwipeable = () => {
+    return (
+      <View style={{ marginTop: 16, height: 80 }}>
+        <TouchableOpacity style={{ width: 80, height: 80, backgroundColor: '#A42B32', justifyContent: 'center', alignItems: 'center' }}>
+          <Image source={require('./src/media/images/ic_delete.png')} />
+        </TouchableOpacity>
+      </View>
+    )
+  };
+
   return (
     <View style={styles.container}>
 
@@ -11,62 +23,78 @@ const Screen4 = () => {
         <Text>   </Text>
       </View>
 
-      <View style={{ flexDirection: 'row', marginTop: 16 }}>
+      <GestureHandlerRootView>
+        <Swipeable renderLeftActions={false} renderRightActions={rightSwipeable}>
 
-        <Image style={styles.imageItem} source={require('./src/media/images/apple.png')} />
+          <View style={{ flexDirection: 'row', marginTop: 16, height: 80 }}>
 
-        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+            <Image style={styles.imageItem} source={require('./src/media/images/apple.png')} />
 
-          <Text style={styles.text2}>Red Apple</Text>
+            <View>
 
-          <View style={{ flexDirection: 'row' }}>
-            <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
-            <Text style={styles.text3}>Add to cart</Text>
+              <Text style={styles.text2}>Red Apple</Text>
+
+              <View style={{ flexDirection: 'row' }}>
+                <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
+                <Text style={styles.text3}>Add to cart</Text>
+              </View>
+
+            </View>
+
+            <Text style={styles.text4}>$4,99 kg</Text>
+
           </View>
 
-        </View>
+        </Swipeable>
+      </GestureHandlerRootView>
 
-        <Text style={styles.text4}>$4,99 kg</Text>
+      <GestureHandlerRootView>
+        <Swipeable renderLeftActions={false} renderRightActions={rightSwipeable}>
+          <View style={{ flexDirection: 'row', marginTop: 16 }}>
 
-      </View>
+            <Image style={styles.imageItem} source={require('./src/media/images/salmon.png')} />
 
-      <View style={{ flexDirection: 'row', marginTop: 16 }}>
+            <View>
 
-        <Image style={styles.imageItem} source={require('./src/media/images/salmon.png')} />
+              <Text style={styles.text2}>Salmon</Text>
 
-        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+              <View style={{ flexDirection: 'row' }}>
+                <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
+                <Text style={styles.text3}>Add to cart</Text>
+              </View>
 
-          <Text style={styles.text2}>Salmon</Text>
+            </View>
 
-          <View style={{ flexDirection: 'row' }}>
-            <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
-            <Text style={styles.text3}>Add to cart</Text>
+            <Text style={styles.text4}>$50 kg</Text>
+
           </View>
 
-        </View>
+        </Swipeable>
+      </GestureHandlerRootView>
 
-        <Text style={styles.text4}>$50 kg</Text>
+      <GestureHandlerRootView>
+        <Swipeable renderLeftActions={false} renderRightActions={rightSwipeable}>
+          <View style={{ flexDirection: 'row', marginTop: 16 }}>
 
-      </View>
+            <Image style={styles.imageItem} source={require('./src/media/images/avocado.png')} />
 
-      <View style={{ flexDirection: 'row', marginTop: 16 }}>
+            <View>
 
-        <Image style={styles.imageItem} source={require('./src/media/images/avocado.png')} />
+              <Text style={styles.text2}>Avocado Bowl</Text>
 
-        <View style={{ justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+              <View style={{ flexDirection: 'row' }}>
+                <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
+                <Text style={styles.text3}>Add to cart</Text>
+              </View>
 
-          <Text style={styles.text2}>Avocado Bowl</Text>
+            </View>
 
-          <View style={{ flexDirection: 'row' }}>
-            <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
-            <Text style={styles.text3}>Add to cart</Text>
+            <Text style={styles.text4}>$24 st</Text>
+
           </View>
 
-        </View>
-
-        <Text style={styles.text4}>$24 st</Text>
-
-      </View>
+        </Swipeable>
+      </GestureHandlerRootView>
 
     </View>
   )
@@ -89,7 +117,7 @@ const styles = StyleSheet.create({
   },
   imageItem: {
     width: 80,
-    height: 68,
+    height: 80,
   },
   imageCart: {
     width: 17.53,
