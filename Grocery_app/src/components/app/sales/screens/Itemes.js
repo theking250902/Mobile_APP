@@ -1,10 +1,22 @@
-import { StyleSheet, Text, View, Image, Pressable, FlatList, Touchable, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Image, Pressable, FlatList, Touchable, TouchableOpacity, TextInput } from 'react-native'
+import React, { useState } from 'react'
 
 const Itemes = () => {
+    const [text, setText] = useState(0);
+    const [selected, isSelected] = useState(null);
+
     const renderItem = (props) => {
         const { item } = props;
-        const { name, quantity, price, image } = item;
+        const { name, quantity, price, image, id } = item;
+        const isSelected = selected === item.id;
+        const ClickItemtang = () => {
+            setText((c) => c + 1);
+        }
+        const ClickItemgiam = () => {
+            setText((c) => c - 1);
+        }
+        console.log(quantity);
+        console.log("<<<<<<");
         return (
 
             <TouchableOpacity style={{
@@ -22,23 +34,28 @@ const Itemes = () => {
                 <Text style={{
                     fontWeight: '700', fontSize: 18, color: '#6D3805', left: 114, bottom: 60,
                 }}>{name}</Text>
-                <View style={{
+                <Pressable  style={{
                     backgroundColor: '#F4F4F4', width: 98, height: 32, alignSelf: 'center', bottom: 40, borderRadius: 30,
                 }}>
-                    <Pressable style={{
-                        backgroundColor: '#FFFFFF', width: 25, height: 25, borderRadius: 30, top: 3, left: 5,
-                    }}>
+                    <TouchableOpacity
+                        onPress={ClickItemgiam}
+                        style={{
+                            backgroundColor: '#FFFFFF', width: 25, height: 25, borderRadius: 30, top: 3, left: 5,
+                        }}>
                         <Text style={{ fontSize: 30, bottom: 10, left: 8, color: '#000000' }}>-</Text>
-                    </Pressable>
+                    </TouchableOpacity>
                     <Text style={{
                         alignSelf: 'center', bottom: 20, fontWeight: '400', color: '#6D3805',
-                    }}>{quantity}</Text>
-                    <Pressable style={{
-                        backgroundColor: '#FFFFFF', width: 25, height: 25, borderRadius: 30, top: -40.5, left: 69,
-                    }}>
+                    }}>{text}</Text>
+
+                    <TouchableOpacity
+                        onPress={ClickItemtang}
+                        style={{
+                            backgroundColor: '#FFFFFF', width: 25, height: 25, borderRadius: 30, top: -40.5, left: 69,
+                        }}>
                         <Text style={{ fontSize: 25, bottom: 6, left: 5, color: '#000000' }}>+</Text>
-                    </Pressable>
-                </View>
+                    </TouchableOpacity>
+                </Pressable>
                 <Text style={{
                     color: '#6D3805', fontWeight: '400', fontFamily: 'Klarna Text', fontSize: 18, left: 296, bottom: 67,
                 }}>{price}</Text>
@@ -70,7 +87,7 @@ const Itemes = () => {
                 color: '#FF5E00'
             }}>Itemes</Text>
             {/* item */}
-            
+
             <FlatList
                 data={data}
                 renderItem={renderItem}
