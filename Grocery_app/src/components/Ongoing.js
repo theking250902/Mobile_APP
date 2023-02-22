@@ -4,6 +4,7 @@ import React from 'react'
 const Ongoing = () => {
   return (
     <View>
+
 <Image style={styles.arrow} source={require('../image/Arrow.png')}/>
      <Text style={styles.text}>Orders</Text>
      <View style={{flexDirection:'row',justifyContent:'space-around'}}>
@@ -19,13 +20,25 @@ const Ongoing = () => {
      </View>
 
 
+
      <View style={{flexDirection:'row'}}>   
      <View style={styles.chidut}>
      </View>
-     <View>
-     <Image style={{width:14,height:15}} source={require('../image/check_24px.png')}/>
-     <Image style={{width:14,height:15}} source={require('../image/check_24px.png')}/>
-     <Image style={{width:14,height:15}} source={require('../image/check_24px.png')}/>
+     <View style={{justifyContent:'space-between',height:296,marginTop:50,marginLeft:-9}}>
+     <Image style={{width:14,height:15}} source={require('../image/gr90.png')}/>
+     <Image style={{width:14,height:15}} source={require('../image/gr90.png')}/>
+     <Image style={{width:14,height:15}} source={require('../image/gr90.png')}/>
+     </View>
+     <View style={{justifyContent:'space-between',height:296,marginTop:50,marginLeft:30}}>
+     <Image style={{}} source={require('../image/Group.png')}/>
+     <Image style={{}} source={require('../image/gr2.png')}/>
+     <Image style={{}} source={require('../image/gr3.png')}/>
+     </View>
+     <View style={{justifyContent:'space-between',height:296,marginTop:50,marginLeft:20}}>
+    <Text style={{color:'#FF5E00',marginTop:10}} >We are packin your items...</Text>
+    <Text style={{color:'#FF5E00',marginTop:10}} >Your order is delivering to {'\n'}
+your location...</Text>
+    <Text style={{color:'#FF5E00',marginBottom:20}} >Your order is received.</Text>
      </View>
      </View>
     </View>
@@ -63,7 +76,7 @@ const styles = StyleSheet.create({
       borderTopRightRadius:25,
       },
       chidut:{
-        borderWidth:1,
+        borderWidth:2,
         borderStyle:'dashed',
         marginTop:50,
          height:296,
