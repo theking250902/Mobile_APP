@@ -5,11 +5,13 @@ import { Swipeable, GestureHandlerRootView } from 'react-native-gesture-handler'
 const rightSwipe = () => {
     return (
         <TouchableOpacity style={styles.swipeView}>
-             <Image source={require('../image/btnDel.png')} />
+            <Image source={require('../image/btnDel.png')} />
         </TouchableOpacity>
     )
 
 }
+
+
 const CartItem = () => {
 
 

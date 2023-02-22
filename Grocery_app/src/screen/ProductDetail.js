@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
   container: {
     paddingStart: 20,
     paddingEnd: 20,
-    flex: 1
+    flex: 1,
+    backgroundColor:'#FFFFFF'
   },
   headerView: {
     marginTop: 64
