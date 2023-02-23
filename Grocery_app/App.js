@@ -12,7 +12,7 @@ import ExampleTab from './src/tab/ExampleTab'
 
 const App = () => {
   return (
-    <CategoryDetail/>
+    <Cart/>
   )
 }
 

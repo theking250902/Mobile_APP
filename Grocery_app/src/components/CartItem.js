@@ -1,20 +1,18 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { Swipeable, GestureHandlerRootView } from 'react-native-gesture-handler';
 
-const rightSwipe = () => {
-    return (
-        <TouchableOpacity style={styles.swipeView}>
-            <Image source={require('../image/btnDel.png')} />
-        </TouchableOpacity>
-    )
+const CartItem = (props) => {
+    const { data,onIncrement,onDecrement,onDelete } = props;
 
-}
+    const rightSwipe = () => {
+        return (
+            <TouchableOpacity style={styles.swipeView} onPress={onDelete}>
+                <Image source={require('../image/btnDel.png')} />
+            </TouchableOpacity>
+        )
 
-
-const CartItem = () => {
-
-
+    }
 
     return (
         <GestureHandlerRootView>
@@ -24,13 +22,13 @@ const CartItem = () => {
                         <Image source={require('../image/strawberry.png')} />
                     </View>
                     <View style={styles.centerView}>
-                        <Text style={styles.productName}>Strawberry</Text>
+                        <Text style={styles.productName}>{data.name}</Text>
                         <View style={styles.controlView}>
-                            <TouchableOpacity style={styles.btnUpDown}>
+                            <TouchableOpacity style={styles.btnUpDown} onPress={onDecrement}>
                                 <Text style={styles.textBtn}>-</Text>
                             </TouchableOpacity>
-                            <Text style={styles.quantityText}>2</Text>
-                            <TouchableOpacity style={styles.btnUpDown}>
+                            <Text style={styles.quantityText}>{data.quantity}</Text>
+                            <TouchableOpacity style={styles.btnUpDown} onPress={onIncrement}>
                                 <Text style={styles.textBtn}>+</Text>
                             </TouchableOpacity>
                         </View>

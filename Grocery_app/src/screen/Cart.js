@@ -1,8 +1,40 @@
-import { StyleSheet, Text, View, StatusBar, Image, TouchableOpacity, Dimensions,FlatList } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, StatusBar, Image, TouchableOpacity, Dimensions, FlatList } from 'react-native'
+import React, { useState } from 'react'
 import CartItem from '../components/CartItem'
 
 const Cart = () => {
+    const [products, setProducts] = useState([
+        { id: 1, name: 'Strawberry 1', quantity: 0 },
+        { id: 2, name: 'Strawberry 2', quantity: 0 },
+        { id: 3, name: 'Strawberry 3', quantity: 0 },
+        { id: 4, name: 'Strawberry 4', quantity: 0 },
+    ]);
+
+
+    const handleIncrement = (id) => {
+        const newProducts = products.map((product) => {
+            if (product.id === id) {
+                return { ...product, quantity: product.quantity + 1 };
+            }
+            return product;
+        });
+        setProducts(newProducts);
+    };
+
+    const handleDecrement = (id) => {
+        const newProducts = products.map((product) => {
+            if (product.id === id && product.quantity > 0) {
+                return { ...product, quantity: product.quantity - 1 };
+            }
+            return product;
+        });
+        setProducts(newProducts);
+    };
+    const handleDelete = (id) => {
+        const newProducts = products.filter((product) => product.id !== id);
+        setProducts(newProducts);
+      };
+
     return (
         <View>
             <StatusBar
@@ -19,9 +51,10 @@ const Cart = () => {
             <Text style={styles.cartText}>Cart</Text>
             <View style={styles.listView}>
                 <FlatList
-                    data={dataLord}
-                    renderItem = {({ item })=> <CartItem/>}
-                    keyExtractor={(item) => item._id}
+                    data={products}
+                    renderItem={({ item }) => <CartItem data={item} onIncrement={() => handleIncrement(item.id)}
+                        onDecrement={() => handleDecrement(item.id)}  onDelete={() => handleDelete(item.id)}/>}
+                    keyExtractor={(item) => item.id.toString()}
                 />
             </View>
             <TouchableOpacity style={styles.btnCkeckout}>
@@ -69,10 +102,3 @@ const styles = StyleSheet.create({
 })
 
 
-const dataLord = [
-    { "_id": "1" },
-    { "_id": "2" },
-    { "_id": "3" },
-    { "_id": "4" },
-    { "_id": "5" },
-  ]
