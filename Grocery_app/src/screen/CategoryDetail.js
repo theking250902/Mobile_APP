@@ -1,14 +1,71 @@
-import { StyleSheet, Text, View, StatusBar, Image, TouchableOpacity, Dimensions, TextInput,useWindowDimensions } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Image, TouchableOpacity, Dimensions, TextInput } from 'react-native'
 import React, { useState, } from 'react'
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ExampleTab from '../tab/ExampleTab';
 
 
-
-
-
 const CategoryDetail = () => {
-  
+
+  const FruitRoute = () => (
+    <ExampleTab />
+  );
+
+  const VegetableRoute = () => (
+    <ExampleTab />
+  );
+  const MeatRoute = () => (
+    <ExampleTab />
+  );
+  const FishRoute = () => (
+    <ExampleTab />
+  );
+  const SeafoodRoute = () => (
+    <ExampleTab />
+  );
+  const renderScene = SceneMap({
+    fruit: FruitRoute,
+    vegetable: VegetableRoute,
+    meat: MeatRoute,
+    fish: FishRoute,
+    seafood:SeafoodRoute
+  });
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    { key: 'fruit', title: 'Fruit' },
+    { key: 'vegetable', title: 'Vegetable' },
+    { key: 'meat', title: 'Meat' },
+    { key: 'fish', title: 'Fish' },
+    { key: 'seafood', title: 'Seafood' },
+  ]);
+  const renderTabBar = props => (
+
+    <TabBar
+        {...props}
+        indicatorStyle={{ backgroundColor:'#FF5E00',height:3}}
+        style={{ backgroundColor: 'transparent' }}
+        scrollEnabled={true}
+        gap={10}
+        tabStyle={{ width: "auto"}}
+        onLayout={event => {
+            const { width } = event.nativeEvent.layout;
+            props.setTabBarWidth(props.navigationState.index, width);
+        }}
+        renderLabel={({ route, focused }) => {
+            return (
+                <Text
+                    style={[styles.label, focused ? styles.activeLabel : styles.label]}
+                >
+                    {route.title}
+                </Text>
+            );
+        }}
+        pressColor={'transparent'}
+
+    />
+
+);
+
+
   return (
     <View style={styles.container}>
       <StatusBar
@@ -27,8 +84,14 @@ const CategoryDetail = () => {
         <Image source={require('../image/search.png')} />
         <TextInput style={styles.textInput} placeholder='Search' placeholderTextColor="#6D380591" />
       </View>
-      <View >
-       
+      <View style={styles.tabView}>
+        <TabView
+          navigationState={{ index, routes }}
+          onIndexChange={setIndex}
+          renderScene={renderScene}
+          renderTabBar={renderTabBar}
+
+        />
       </View>
 
 
@@ -70,21 +133,22 @@ const styles = StyleSheet.create({
     marginStart: 10
   },
   tabView: {
-    height: Dimensions.get('window').height - 200,
+    height: Dimensions.get('window').height - 170,
   },
   label: {
-    fontFamily: 'Poppins',
-    fontSize: 16,
-    fontWeight: '600',
-    color: ' #4E4B66',
+    fontFamily: 'Klarna Text',
+    fontSize: 20,
+    fontWeight: '400',
+    color: '#804F1E',
+    
   },
   activeLabel: {
-    fontFamily: 'Poppins',
-    fontSize: 16,
+    fontFamily: 'Klarna Text',
+    fontSize: 20,
     fontWeight: '600',
-    color: '#000000',
-    borderBottomWidth: 4,
-    borderColor: '#1877F2',
-    height: 28,
+    color: '#FF5E00',
+    // borderBottomWidth: 4,
+    // borderColor: '#FF5E00',
+    // height: 34,
   }
 })
