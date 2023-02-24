@@ -6,6 +6,7 @@ import Address from './src/components/Address'
 import Orders from './src/components/Orders'
 import Ongoing from './src/components/Ongoing'
 import EditAddress from './src/components/EditAddress'
+import Payment from './src/components/Payment'
 
 
  
@@ -14,7 +15,7 @@ import EditAddress from './src/components/EditAddress'
 const App = () => {
   return (
     <View>
-    <EditAddress/>
+    <Payment/>
     </View>
   )
 }
