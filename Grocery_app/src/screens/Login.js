@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, Image, TextInput, Pressable, Button } from 'react-native'
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
 const Login = (props) => {
 
-   const {navigation} = props;
+    const { navigation } = props;
 
     return (
         <View style={styles.container}>
@@ -35,13 +35,16 @@ const Login = (props) => {
             </View>
             <Text style={styles.FP}> Forgote Password</Text>
             <View style={styles.buttom1}>
-                <Pressable style={styles.button}><Text style={styles.buttomSI}  >Sign in</Text></Pressable>
+                <Pressable style={styles.button}
+                    onPress={() => navigation.navigate('Shop')}>
+                    <Text style={styles.buttomSI}  >Sign in</Text>
+                </Pressable>
             </View>
-            <View  style={styles.textDS}>
+            <View style={styles.textDS}>
                 <Text style={styles.textDon}>Don’t have an account?</Text>
 
                 <Text style={styles.textSU}
-                 onPress={() => navigation.navigate('Register1')} > Sign Up</Text>
+                    onPress={() => navigation.navigate('Register1')} > Sign Up</Text>
             </View>
 
             <View style={styles.line}>
@@ -59,18 +62,18 @@ export default Login
 
 const styles = StyleSheet.create({
 
-    line:{
-        top:30,
-        alignItems:'center',
+    line: {
+        top: 30,
+        alignItems: 'center',
     },
-    textSU:{
-        color:'#FF5E00',
+    textSU: {
+        color: '#FF5E00',
     },
-    textDon:{},
-    textDS:{
-        top:1,
-        flexDirection:'row',
-        left:100,
+    textDon: {},
+    textDS: {
+        top: 1,
+        flexDirection: 'row',
+        left: 100,
     },
 
     buttomSI: {

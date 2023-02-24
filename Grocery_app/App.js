@@ -5,7 +5,7 @@ import Navigation from './src/navigation/Navigation'
 
 const App = () => {
   return (
-   <Shop></Shop>
+   <Navigation></Navigation>
   )
 }
 
