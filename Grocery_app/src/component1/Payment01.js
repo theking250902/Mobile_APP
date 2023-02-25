@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native'
 import React from 'react'
 
-const Payment = () => {
+const Payment01 = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={{
@@ -137,7 +137,7 @@ kungsmassan</Text>
   )
 }
 
-export default Payment
+export default Payment01
 
 const styles = StyleSheet.create({
   
