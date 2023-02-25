@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, StatusBar, Image, TouchableOpacity, Dimensions, FlatList } from 'react-native'
 import React, { useState } from 'react'
-import CartItem from '../components/CartItem'
+import CartItem from '../components02/CartItem'
 
 const Cart = () => {
     const [products, setProducts] = useState([

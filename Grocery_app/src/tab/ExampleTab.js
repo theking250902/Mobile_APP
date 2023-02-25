@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, View ,Image} from 'react-native'
 import React from 'react'
-import ProductItem from '../components/ProductItem'
+import ProductItem from '../components02/ProductItem'
 
 const ExampleTab = () => {
     return (

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, StatusBar, Dimensions, Image, TextInput } from 'react-native'
 import React from 'react'
 import { FlatList } from 'react-native-gesture-handler'
-import CategoryItem from '../components/CategoryItem'
+import CategoryItem from '../components02/CategoryItem'
 
 const Category = () => {
     return (

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity, Dimensions, ScrollView } from 'react-native'
 import React from 'react'
-import ProductItem from '../components/ProductItem'
+import ProductItem from '../components02/ProductItem'
 
 const ProductDetail = () => {
   return (
