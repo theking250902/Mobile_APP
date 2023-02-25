@@ -14,7 +14,9 @@ const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
-   <Navigation/>
+   <NavigationContainer>
+    <Navigation/>
+   </NavigationContainer>
   )
 }
 

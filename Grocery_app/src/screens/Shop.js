@@ -1,11 +1,15 @@
 
-import { StyleSheet, Text, View, Image, TextInput, FlatList } from 'react-native'
+import { StyleSheet, Text, View, Image, TextInput, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import {Card} from 'react-native-shadow-cards';
 
 
-const Shop = () => {
+const Shop = (props) => {
 
+  const {navigation} = props;
+  const Click = () =>{
+    navigation.vavigate('CategoryDetail');
+  }
   //renderItemCategories
   const renderItemCategories = (props) => {
     const { item } = props;
@@ -91,9 +95,12 @@ const Shop = () => {
         <Text style={styles.Categories}>
           Categories
         </Text >
-        <Text style={styles.seeAll}>
+        
+          <Text style={styles.seeAll}>
           see all
         </Text>
+        
+        
       </View>
 
       {/* FlatListCategories */}
@@ -112,9 +119,11 @@ const Shop = () => {
         <Text style={styles.PopularDeals}>
           Popular deals
         </Text >
+        <TouchableOpacity onPress={Click}>
         <Text style={styles.seeAll}>
           see all
         </Text>
+        </TouchableOpacity>
       </View>
 
       {/*FlatListCategories */}
