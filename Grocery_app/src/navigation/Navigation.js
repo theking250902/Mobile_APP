@@ -13,6 +13,8 @@ import Shop from '../screens/Shop'
 import CartItem from '../components02/CartItem'
 import Cart from '../screen/Cart'
 import Category from '../screen/Category'
+import A from '../components04/app/sales/screens/A'
+import OrderFailed from '../components04/app/sales/screens/OrderFailed'
 
 
 const Stack = createStackNavigator();
@@ -21,12 +23,7 @@ const Navigation = () => {
   return (
     <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown:false}} >
-            <Stack.Screen name='CartItem' component={Cart}/>
-            <Stack.Screen name='Register1' component={Register1}/>
-            <Stack.Screen name='Register2' component={Register2}/>
-            <Stack.Screen name='Register3' component={Register3}/>
-            <Stack.Screen name='Shop' component={Shop}/>
-
+            <Stack.Screen name='CartItem' component={OrderFailed}/>
         </Stack.Navigator>
     </NavigationContainer>
   )
