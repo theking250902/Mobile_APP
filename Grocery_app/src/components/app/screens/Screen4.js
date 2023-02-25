@@ -8,7 +8,7 @@ const Screen4 = () => {
     return (
       <View style={{ marginTop: 16, height: 80 }}>
         <TouchableOpacity style={{ width: 80, height: 80, backgroundColor: '#A42B32', justifyContent: 'center', alignItems: 'center' }}>
-          <Image source={require('./src/media/images/ic_delete.png')} />
+          <Image source={require('../../../media/images/ic_delete.png')} />
         </TouchableOpacity>
       </View>
     )
@@ -18,7 +18,7 @@ const Screen4 = () => {
     <View style={styles.container}>
 
       <View style={styles.row}>
-        <Image style={styles.imageBack} source={require('./src/media/images/ic_back.png')} />
+        <Image style={styles.imageBack} source={require('../../../media/images/ic_back.png')} />
         <Text style={styles.text1}>Favorite</Text>
         <Text>   </Text>
       </View>
@@ -28,14 +28,14 @@ const Screen4 = () => {
 
           <View style={{ flexDirection: 'row', marginTop: 16, height: 80 }}>
 
-            <Image style={styles.imageItem} source={require('./src/media/images/apple.png')} />
+            <Image style={styles.imageItem} source={require('../../../media/images/apple.png')} />
 
             <View>
 
               <Text style={styles.text2}>Red Apple</Text>
 
               <View style={{ flexDirection: 'row' }}>
-                <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
+                <Image style={styles.imageCart} source={require('../../../media/images/cart.png')} />
                 <Text style={styles.text3}>Add to cart</Text>
               </View>
 
@@ -52,14 +52,14 @@ const Screen4 = () => {
         <Swipeable renderLeftActions={false} renderRightActions={rightSwipeable}>
           <View style={{ flexDirection: 'row', marginTop: 16 }}>
 
-            <Image style={styles.imageItem} source={require('./src/media/images/salmon.png')} />
+            <Image style={styles.imageItem} source={require('../../../media/images/salmon.png')} />
 
             <View>
 
               <Text style={styles.text2}>Salmon</Text>
 
               <View style={{ flexDirection: 'row' }}>
-                <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
+                <Image style={styles.imageCart} source={require('../../../media/images/cart.png')} />
                 <Text style={styles.text3}>Add to cart</Text>
               </View>
 
@@ -76,14 +76,14 @@ const Screen4 = () => {
         <Swipeable renderLeftActions={false} renderRightActions={rightSwipeable}>
           <View style={{ flexDirection: 'row', marginTop: 16 }}>
 
-            <Image style={styles.imageItem} source={require('./src/media/images/avocado.png')} />
+            <Image style={styles.imageItem} source={require('../../../media/images/avocado.png')} />
 
             <View>
 
               <Text style={styles.text2}>Avocado Bowl</Text>
 
               <View style={{ flexDirection: 'row' }}>
-                <Image style={styles.imageCart} source={require('./src/media/images/cart.png')} />
+                <Image style={styles.imageCart} source={require('../../../media/images/cart.png')} />
                 <Text style={styles.text3}>Add to cart</Text>
               </View>
 

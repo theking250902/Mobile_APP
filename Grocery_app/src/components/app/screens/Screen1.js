@@ -5,11 +5,11 @@ const Screen1 = () => {
     return (
         <View style={styles.container}>
             <View style={styles.row}>
-                <Image style={styles.imageBack} source={require('./src/media/images/ic_back.png')} />
+                <Image style={styles.imageBack} source={require('../../../media/images/ic_back.png')} />
                 <Text style={styles.text1}>Favorite</Text>
                 <Text>   </Text>
             </View>
-            <Image style={styles.imageHome} source={require('./src/media/images/home.png')} />
+            <Image style={styles.imageHome} source={require('../../../media/images/home.png')} />
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <Text style={styles.text2}>Your heart is empty</Text>
             </View>

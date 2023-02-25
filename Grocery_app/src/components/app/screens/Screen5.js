@@ -11,7 +11,7 @@ const Screen5 = (props) => {
     <View style={styles.container}>
 
       <View style={styles.row}>
-        <Image style={styles.imageBack} source={require('./src/media/images/ic_back.png')} />
+        <Image style={styles.imageBack} source={require('../../../media/images/ic_back.png')} />
         <Text style={styles.text1}>Account</Text>
         <Text>   </Text>
       </View>
@@ -21,7 +21,7 @@ const Screen5 = (props) => {
         <Pressable onPress={() => navigation.navigate('Profile')}>
           <View style={{ flexDirection: 'row' }}>
             <View style={{ width: 25, alignItems: 'center' }}>
-              <Image style={styles.imageItem} source={require('./src/media/images/ic_profile.png')} />
+              <Image style={styles.imageItem} source={require('../../../media/images/ic_profile.png')} />
             </View>
             <Text style={styles.text2}>Profile</Text>
           </View>
@@ -31,7 +31,7 @@ const Screen5 = (props) => {
         <Pressable onPress={() => navigation.navigate('Orders')}>
           <View style={{ flexDirection: 'row', marginTop: 33 }}>
             <View style={{ width: 25, alignItems: 'center' }}>
-              <Image style={styles.imageItem} source={require('./src/media/images/ic_orders.png')} />
+              <Image style={styles.imageItem} source={require('../../../media/images/ic_orders.png')} />
             </View>
             <Text style={styles.text2}>Orders</Text>
           </View>
@@ -39,14 +39,14 @@ const Screen5 = (props) => {
 
         <View style={{ flexDirection: 'row', marginTop: 33 }}>
           <View style={{ width: 25, alignItems: 'center' }}>
-            <Image style={styles.imageItem} source={require('./src/media/images/ic_address.png')} />
+            <Image style={styles.imageItem} source={require('../../../media/images/ic_address.png')} />
           </View>
           <Text style={styles.text2}>Address</Text>
         </View>
 
         <View style={{ flexDirection: 'row', marginTop: 33 }}>
           <View style={{ width: 25, alignItems: 'center' }}>
-            <Image style={styles.imageItem} source={require('./src/media/images/ic_payment.png')} />
+            <Image style={styles.imageItem} source={require('../../../media/images/ic_payment.png')} />
           </View>
           <Text style={styles.text2}>Payment</Text>
         </View>
