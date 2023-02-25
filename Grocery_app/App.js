@@ -1,12 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import Welcome from './src/components/Welcome'
-import NewAddress from './src/components/NewAddress'
-import Address from './src/components/Address'
-import Orders from './src/components/Orders'
-import Ongoing from './src/components/Ongoing'
-import EditAddress from './src/components/EditAddress'
-import Payment from './src/components/Payment'
+import Welcome from './src/component1/Welcome'
+import Address from './src/component1/Address'
+import Orders from './src/component1/Orders'
+import Ongoing from './src/component1/Ongoing'
+import EditAddress from './src/component1/EditAddress'
+import Payment01 from './src/component1/Payment01'
 
 
  
@@ -15,7 +14,7 @@ import Payment from './src/components/Payment'
 const App = () => {
   return (
     <View>
-    <Payment/>
+    <Payment01/>
     </View>
   )
 }
