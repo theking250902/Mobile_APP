@@ -26,12 +26,21 @@ import ProductDetail from '../screen/ProductDetail';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const news1 = () =>{
+const News1 = () =>{
   return(
     <Stack.Navigator initialRouteName='Shop' screenOptions={{headerShown:false}}>
     <Stack.Screen name="Shop" component={Shop} />
-    <Stack.Screen name="CategoryDetail" component={CategoryDetail} />
-    <Stack.Screen name="CategoryDetail" component={ProductDetail} />
+    <Stack.Screen name="Category" component={Category} />
+    </Stack.Navigator>
+  )
+}
+const News3 = () =>{
+  return(
+    <Stack.Navigator initialRouteName='Cart' screenOptions={{headerShown:false}}>
+    <Stack.Screen name="Cart" component={Cart} />
+    <Stack.Screen name="ProductDetail" component={ProductDetail} />
+    <Stack.Screen name="CartItem" component={CartItem} />
+
     </Stack.Navigator>
   )
 }
@@ -43,13 +52,13 @@ const Navigation = () => {
       tabBarIcon: ({ focused, color, size }) => {
         let iconName;
 
-        if (route.name === 'Shop') {
+        if (route.name === 'News1') {
           iconName = focused
             ? 'ios-home'  
             : 'ios-home';
         } else if (route.name === 'Category') {
           iconName = focused ? 'compass-outline' : 'compass-outline';
-        }   else if (route.name === 'Cart') {
+        }   else if (route.name === 'News3') {
           iconName = focused ? 'ios-cart' : 'ios-cart';
         }  else if (route.name === 'Favorite') {
           iconName = focused ? 'heart-sharp' : 'heart-sharp';
@@ -64,10 +73,10 @@ const Navigation = () => {
       tabBarInactiveTintColor: 'gray',
     })}
    >
-      <Tab.Screen name="Shop" component={news1} />
-      <Tab.Screen name="Category" component={ProductDetail} />
-      <Tab.Screen name="Cart" component={Cart} />
-      <Tab.Screen name="Favorite" component={Screen1} />
+      <Tab.Screen name="News1" component={News1} options={{title:'Shop'}} />
+      <Tab.Screen name="Category" component={Category} />
+      <Tab.Screen name="News3" component={News3}  options={{title:'Cart'}}/>
+      <Tab.Screen name="Favorite" component={Screen4} />
       <Tab.Screen name="Account" component={Screen5} />
     
     </Tab.Navigator>

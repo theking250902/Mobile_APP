@@ -3,8 +3,11 @@ import React, { useState } from 'react'
 import { Swipeable, GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const CartItem = (props) => {
+    const {navigation} = props;
     const { data,onIncrement,onDecrement,onDelete } = props;
-
+    const Click = () =>{
+        navigation.navigate('ProductDetail');
+    }
     const rightSwipe = () => {
         return (
             <TouchableOpacity style={styles.swipeView} onPress={onDelete}>
@@ -15,7 +18,8 @@ const CartItem = (props) => {
     }
 
     return (
-        <GestureHandlerRootView>
+        <TouchableOpacity onPress={Click}>
+             <GestureHandlerRootView>
             <Swipeable renderRightActions={rightSwipe}>
                 <View style={styles.container}>
                     <View style={styles.imgView}>
@@ -41,6 +45,8 @@ const CartItem = (props) => {
                 </View>
             </Swipeable>
         </GestureHandlerRootView>
+        </TouchableOpacity>
+       
     )
 }
 

@@ -10,6 +10,7 @@ import NewAddress from '../Grocery_app/src/component1/NewAddress';
 import Address from './src/component1/Address';
 import Category from './src/screen/Category';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import CategoryDetail from './src/screen/CategoryDetail';
 const Tab = createBottomTabNavigator();
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
    <NavigationContainer>
     <Navigation/>
    </NavigationContainer>
+
   )
 }
 

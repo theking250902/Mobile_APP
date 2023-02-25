@@ -2,8 +2,11 @@ import { StyleSheet, View, Text, Image, TouchableHighlight, TouchableOpacity } f
 import React from 'react'
 import { GestureHandlerRootView, Swipeable } from 'react-native-gesture-handler'
 
-const Screen4 = () => {
-
+const Screen4 = (props) => {
+  const {navigation} = props;
+  const Click = () =>{
+    navigation.navigate('ProductDetail');
+}
   const rightSwipeable = () => {
     return (
       <View style={{ marginTop: 16, height: 80 }}>
@@ -22,7 +25,9 @@ const Screen4 = () => {
         <Text style={styles.text1}>Favorite</Text>
         <Text>   </Text>
       </View>
+    <TouchableOpacity onPress={Click}>
 
+    
       <GestureHandlerRootView>
         <Swipeable renderLeftActions={false} renderRightActions={rightSwipeable}>
 
@@ -47,7 +52,7 @@ const Screen4 = () => {
 
         </Swipeable>
       </GestureHandlerRootView>
-
+      </TouchableOpacity>
       <GestureHandlerRootView>
         <Swipeable renderLeftActions={false} renderRightActions={rightSwipeable}>
           <View style={{ flexDirection: 'row', marginTop: 16 }}>

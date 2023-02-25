@@ -2,12 +2,13 @@ import { StyleSheet, Text, View, StatusBar, Image, TouchableOpacity, Dimensions,
 import React, { useState } from 'react'
 import CartItem from '../components02/CartItem'
 
-const Cart = () => {
+const Cart = (props) => {
+    const { navigation } = props;
     const [products, setProducts] = useState([
-        { id: 1, name: 'Strawberry 1', quantity: 0 },
-        { id: 2, name: 'Strawberry 2', quantity: 0 },
-        { id: 3, name: 'Strawberry 3', quantity: 0 },
-        { id: 4, name: 'Strawberry 4', quantity: 0 },
+        { id: 1, name: 'Red Apple', quantity: 0 },
+        { id: 2, name: 'Orginal Banana', quantity: 0 },
+        { id: 3, name: 'Avocado Bowl', quantity: 0 },
+        { id: 4, name: 'Salmon', quantity: 0 },
     ]);
 
 
@@ -52,7 +53,7 @@ const Cart = () => {
             <View style={styles.listView}>
                 <FlatList
                     data={products}
-                    renderItem={({ item }) => <CartItem data={item} onIncrement={() => handleIncrement(item.id)}
+                    renderItem={({ item }) => <CartItem data={item} navigation={navigation} onIncrement={() => handleIncrement(item.id)}
                         onDecrement={() => handleDecrement(item.id)}  onDelete={() => handleDelete(item.id)}/>}
                     keyExtractor={(item) => item.id.toString()}
                 />

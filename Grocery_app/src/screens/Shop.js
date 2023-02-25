@@ -8,8 +8,9 @@ const Shop = (props) => {
 
   const {navigation} = props;
   const Click = () =>{
-    navigation.vavigate('CategoryDetail');
-  }
+    navigation.navigate('Category');
+  } 
+
   //renderItemCategories
   const renderItemCategories = (props) => {
     const { item } = props;
@@ -94,11 +95,13 @@ const Shop = (props) => {
       <View style={styles.containerCategories}>
         <Text style={styles.Categories}>
           Categories
-        </Text >
-        
-          <Text style={styles.seeAll}>
+          
+        </Text >     
+        <TouchableOpacity onPress={Click}>
+              <Text style={styles.seeAll}>
           see all
         </Text>
+          </TouchableOpacity>
         
         
       </View>
