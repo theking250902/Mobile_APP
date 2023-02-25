@@ -22,6 +22,7 @@ import Screen1 from '../components/app/screens/Screen1';
 import Screen5 from '../components/app/screens/Screen5';
 import CategoryDetail from '../screen/CategoryDetail';
 import ProductDetail from '../screen/ProductDetail';
+import ChangePassWord from '../compoment03/ChangePassWord';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -44,6 +45,14 @@ const News3 = () =>{
     </Stack.Navigator>
   )
 }
+const News5 = () =>{
+  return(
+    <Stack.Navigator initialRouteName='Screen5' screenOptions={{headerShown:false}}>
+    <Stack.Screen name="Screen5" component={Screen5} />
+    <Stack.Screen name="CartItem" component={CartItem} />
+    </Stack.Navigator>
+  )
+}
 const Navigation = () => {
   return (
     <Tab.Navigator
@@ -62,7 +71,7 @@ const Navigation = () => {
           iconName = focused ? 'ios-cart' : 'ios-cart';
         }  else if (route.name === 'Favorite') {
           iconName = focused ? 'heart-sharp' : 'heart-sharp';
-        }  else if (route.name === 'Account') {
+        }  else if (route.name === 'News5') {
           iconName = focused ? 'person' : 'person';
         }           
 
@@ -77,7 +86,7 @@ const Navigation = () => {
       <Tab.Screen name="Category" component={Category} />
       <Tab.Screen name="News3" component={News3}  options={{title:'Cart'}}/>
       <Tab.Screen name="Favorite" component={Screen4} />
-      <Tab.Screen name="Account" component={Screen5} />
+      <Tab.Screen name="News5" component={News5}  options={{title:'Account'}} />
     
     </Tab.Navigator>
   )

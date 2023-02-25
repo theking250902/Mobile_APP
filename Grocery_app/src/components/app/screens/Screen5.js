@@ -70,13 +70,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imageBack: {
-
+    marginTop:20
   },
   imageItem: {
 
   },
   text1: {
-    marginTop: 28,
+    marginTop: 40,
     color: '#FF5E00',
     fontFamily: 'Klarna Text',
     fontStyle: 'normal',
