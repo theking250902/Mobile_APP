@@ -54,9 +54,9 @@ const Itemes = () => {
                         }}>
                             <TouchableOpacity
                                 onPress={() => {
-                                    const newData = data1.map((d) => {
+                                    const newData = data.map((d) => {
                                         if (d.id === item.id){
-                                            return { ...d, quantity: d.quantity - 1};
+                                            return { ...d, quantity: Number(d.quantity) - 1};
                                         }else{
                                             return d;
                                         }
@@ -74,9 +74,9 @@ const Itemes = () => {
         
                             <TouchableOpacity
                                 onPress={() => {
-                                    const newData = data1.map((d) => {
+                                    const newData = data.map((d) => {
                                         if (d.id === item.id){
-                                            return { ...d, quantity: d.quantity + 1};
+                                            return { ...d, quantity: Number(d.quantity) + 1};
                                         }else{
                                             return d;
                                         }

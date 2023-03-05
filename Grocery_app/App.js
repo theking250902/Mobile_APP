@@ -19,15 +19,15 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator screenOptions={{headerShown: false}}>
-        <Tab.Screen name='Itemes' component={OrderNavigation} />
-        <Tab.Screen name='UnOrderNavigation' component={UnOrderNavigation} />
-        <Tab.Screen name='OrderFailed' component={Itemes} />
-        <Tab.Screen name='Payment02' component={Payment02} />
-      </Tab.Navigator>
-      
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Tab.Navigator screenOptions={{headerShown: false}}>
+    //     <Tab.Screen name='Itemes' component={OrderNavigation} />
+    //     <Tab.Screen name='UnOrderNavigation' component={UnOrderNavigation} />
+    //     <Tab.Screen name='OrderFailed' component={Itemes} />
+    //     <Tab.Screen name='Payment02' component={Payment02} />
+    //   </Tab.Navigator>
+    // </NavigationContainer>
+    <Itemes/>
 
   )
 }
