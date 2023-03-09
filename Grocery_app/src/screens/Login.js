@@ -36,7 +36,7 @@ const Login = (props) => {
             <Text style={styles.FP}> Forgote Password</Text>
             <View style={styles.buttom1}>
                 <Pressable style={styles.button}
-                    onPress={() => navigation.navigate('Shop')}>
+                    onPress={() => navigation.navigate('Navigation')}>
                     <Text style={styles.buttomSI}  >Sign in</Text>
                 </Pressable>
             </View>

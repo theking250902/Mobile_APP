@@ -36,20 +36,22 @@ const Screen5 = (props) => {
             <Text style={styles.text2}>Orders</Text>
           </View>
         </Pressable>
-
+        <Pressable onPress={() => navigation.navigate('Address')}>
         <View style={{ flexDirection: 'row', marginTop: 33 }}>
           <View style={{ width: 25, alignItems: 'center' }}>
             <Image style={styles.imageItem} source={require('../../../media/images/ic_address.png')} />
           </View>
           <Text style={styles.text2}>Address</Text>
         </View>
-
+        </Pressable>
+        <Pressable onPress={() => navigation.navigate('Payment')}>
         <View style={{ flexDirection: 'row', marginTop: 33 }}>
           <View style={{ width: 25, alignItems: 'center' }}>
             <Image style={styles.imageItem} source={require('../../../media/images/ic_payment.png')} />
           </View>
           <Text style={styles.text2}>Payment</Text>
         </View>
+        </Pressable>
 
       </View>
 

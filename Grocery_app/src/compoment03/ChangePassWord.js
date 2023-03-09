@@ -13,40 +13,40 @@ const ChangePassWord = () => {
     <View style={styles.container}>
       <Image
         style={styles.imageIconArrow}
-        source={require('./images/arrow.png')}
+        source={require('../image/Arrow.png')}
       />
       <Text style={styles.textPassword}>Change Password</Text>
       <View>
         <TextInput style={styles.textInput}></TextInput>
         <Image
           style={styles.imageIconPadlock}
-          source={require('./images/vector.png')}
+          source={require('../images/vector.png')}
         />
         <Image
           style={styles.imageIconEye}
-          source={require('./images/visibility.png')}
+          source={require('../images/visibility.png')}
         />
       </View>
       <View>
         <TextInput style={styles.textInput1}></TextInput>
         <Image
           style={styles.imageIconPadlock1}
-          source={require('./images/vector.png')}
+          source={require('../images/vector.png')}
         />
         <Image
           style={styles.imageIconEye1}
-          source={require('./images/visibility.png')}
+          source={require('../images/visibility.png')}
         />
       </View>
       <View>
         <TextInput style={styles.textInput2}></TextInput>
         <Image
           style={styles.imageIconPadlock2}
-          source={require('./images/vector.png')}
+          source={require('../images/vector.png')}
         />
         <Image
           style={styles.imageIconEye2}
-          source={require('./images/visibility.png')}
+          source={require('../images/visibility.png')}
         />
       </View>
       <Pressable style={styles.textNut}>

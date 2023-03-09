@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, Image, Pressable, FlatList, Touchable, TouchableOpacity, TextInput } from 'react-native'
 import React, { useState } from 'react'
 
-const Itemes = () => {
+const Itemes = (props) => {
+    const {navigation } = props;
     const [text, setText] = useState(0);
     const [selected, isSelected] = useState(null);
 
@@ -19,7 +20,7 @@ const Itemes = () => {
         console.log("<<<<<<");
         return (
 
-            <TouchableOpacity style={{
+            <TouchableOpacity onPress={() =>{navigation.navigate('ProductDetail')}}  style={{
                 backgroundColor: '#ffffff',
                 width: 393,
                 height: 110,

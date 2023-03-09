@@ -5,6 +5,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Address  from '../component1/Address'
+import Orders  from '../component1/Orders'
+import EditAddress  from '../component1/EditAddress'
+import Payment  from '../component1/Payment'
 
 import Login from '../screens/Login'
 import Register1 from '../screens/Register1'
@@ -23,6 +26,7 @@ import Screen5 from '../components/app/screens/Screen5';
 import CategoryDetail from '../screen/CategoryDetail';
 import ProductDetail from '../screen/ProductDetail';
 import ChangePassWord from '../compoment03/ChangePassWord';
+import Itemes from '../components04/app/sales/screens/Itemes';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -50,6 +54,12 @@ const News5 = () =>{
     <Stack.Navigator initialRouteName='Screen5' screenOptions={{headerShown:false}}>
     <Stack.Screen name="Screen5" component={Screen5} />
     <Stack.Screen name="CartItem" component={CartItem} />
+    <Stack.Screen name="Orders" component={Orders} />
+    <Stack.Screen name="Address" component={Address} />
+    <Stack.Screen name="EditAddress" component={EditAddress} />
+    <Stack.Screen name="Payment" component={Payment} />
+    <Stack.Screen name="ProductDetail" component={ProductDetail} />
+    <Stack.Screen name="Itemes" component={Itemes} />
     </Stack.Navigator>
   )
 }

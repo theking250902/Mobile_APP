@@ -1,8 +1,10 @@
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const Payment = () => {
+const Payment = (props) => {
+  const{navigation} = props;
   return (
+
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={{
         padding: 24,
@@ -58,6 +60,9 @@ kungsmassan</Text>
             </View>
           </View>
         </View>
+        <TouchableOpacity onPress={() =>{navigation.navigate('Itemes')}}>
+
+       
         <View style={{ backgroundColor: '#FFF4E9', width: "100%", height: 100, borderRadius: 20, padding: 20, top: 40,marginBottom:20, borderWidth: 1, borderColor: '#FFE6CC' }}>
           <View style={{ backgroundColor: '#FFF4E9', width: 305, height: 48, borderRadius: 7, top: 10, flexDirection: 'row', }}>
             <View>
@@ -78,6 +83,7 @@ kungsmassan</Text>
             </View>
           </View>
         </View>
+        </TouchableOpacity>
         <View style={{ backgroundColor: '#FFF4E9', width: "100%", height: 200, borderRadius: 20, padding: 20, top: 20, borderWidth: 1, borderColor: '#FFE6CC', marginTop: 20 }}>
           <Text style={{ fontWeight: '700', fontSize: 18, color: '#6D3805', fontFamily: 'Klarna Text' }}>Payment Method</Text>
           <View style={{ backgroundColor: '#FFF4E9', width: 305, height: 48, borderRadius: 7, top: 10, flexDirection: 'row', }}>
