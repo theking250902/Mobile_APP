@@ -8,8 +8,8 @@ import Screen5 from './src/components/app/screens/Screen5'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Profile from './Profile'
-import Orders from './Orders'
+import Profile from './src/components/app/screens/Profile'
+import Orders from './src/components/app/screens/Orders'
 
 const Tab = createBottomTabNavigator();
 

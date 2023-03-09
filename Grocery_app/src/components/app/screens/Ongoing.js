@@ -4,7 +4,7 @@ import React from 'react'
 const Ongoing = () => {
     return (
         <View style={styles.container}>
-            <Image style={styles.imageHome} source={require('./src/media/images/ongoing.png')} />
+            <Image style={styles.imageHome} source={require('../../../media/images/ongoing.png')} />
 
             <Text style={styles.text2}>There is n ongoing order right now. You can order from home</Text>
 

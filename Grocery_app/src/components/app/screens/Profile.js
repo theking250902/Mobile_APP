@@ -6,7 +6,7 @@ const Profile = () => {
         <View style={styles.container}>
 
             <View style={styles.row}>
-                <Image style={styles.imageBack} source={require('./src/media/images/ic_back.png')} />
+                <Image style={styles.imageBack} source={require('../../../media/images/ic_back.png')} />
                 <Text style={styles.text1}>Profile</Text>
                 <Text>   </Text>
             </View>
@@ -14,31 +14,31 @@ const Profile = () => {
             <View style={{ marginTop: 50 }}>
                 <View style={{ flexDirection: 'row' }}>
                     <View style={{ width: 25, alignItems: 'center' }}>
-                        <Image style={styles.imageItem} source={require('./src/media/images/account.png')} />
+                        <Image style={styles.imageItem} source={require('../../../media/images/account.png')} />
                     </View>
                     <Text style={styles.text2}>Edit Profile</Text>
                     <View style={{ marginStart: 136, marginTop: 6 }}>
-                        <Image source={require('./src/media/images/backright.png')} />
+                        <Image source={require('../../../media/images/backright.png')} />
                     </View>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 33 }}>
                     <View style={{ width: 25, alignItems: 'center' }}>
-                        <Image style={styles.imageItem} source={require('./src/media/images/cp.png')} />
+                        <Image style={styles.imageItem} source={require('../../../media/images/cp.png')} />
                     </View>
                     <Text style={styles.text2}>Change Password</Text>
                     <View style={{ marginStart: 136, marginTop: 6 }}>
-                        <Image source={require('./src/media/images/backright.png')} />
+                        <Image source={require('../../../media/images/backright.png')} />
                     </View>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 33 }}>
                     <View style={{ width: 25, alignItems: 'center' }}>
-                        <Image style={styles.imageItem} source={require('./src/media/images/mc.png')} />
+                        <Image style={styles.imageItem} source={require('../../../media/images/mc.png')} />
                     </View>
                     <Text style={styles.text2}>My Cards</Text>
                     <View style={{ marginStart: 136, marginTop: 6 }}>
-                        <Image source={require('./src/media/images/backright.png')} />
+                        <Image source={require('../../../media/images/backright.png')} />
                     </View>
                 </View>
 
@@ -46,28 +46,28 @@ const Profile = () => {
 
                 <View style={{ flexDirection: 'row' }}>
                     <View style={{ width: 25, alignItems: 'center' }}>
-                        <Image style={styles.imageItem} source={require('./src/media/images/notifications.png')} />
+                        <Image style={styles.imageItem} source={require('../../../media/images/notifications.png')} />
                     </View>
                     <Text style={styles.text2}>Notifications</Text>
                     <View style={{ marginStart: 118, marginTop: 2 }}>
-                        <Image source={require('./src/media/images/onoff.png')} />
+                        <Image source={require('../../../media/images/onoff.png')} />
                     </View>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 33 }}>
                     <View style={{ width: 25, alignItems: 'center' }}>
-                        <Image style={styles.imageItem} source={require('./src/media/images/language.png')} />
+                        <Image style={styles.imageItem} source={require('../../../media/images/language.png')} />
                     </View>
                     <Text style={styles.text2}>Language</Text> 
                     <Text style={styles.textEnglish}>English</Text> 
                     <View style={{ marginStart: 20, marginTop: 6 }}>
-                        <Image source={require('./src/media/images/backright.png')} />
+                        <Image source={require('../../../media/images/backright.png')} />
                     </View>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 33 }}>
                     <View style={{ width: 25, alignItems: 'center' }}>
-                        <Image style={styles.imageItem} source={require('./src/media/images/logout.png')} />
+                        <Image style={styles.imageItem} source={require('../../../media/images/logout.png')} />
                     </View>
                     <Text style={styles.text2}>Logout</Text>
                 </View>

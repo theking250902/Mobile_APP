@@ -11,7 +11,7 @@ const Orders = () => {
     return (
         <View style={styles.container}>
             <View style={styles.row}>
-                <Image style={styles.imageBack} source={require('./src/media/images/ic_back.png')} />
+                <Image style={styles.imageBack} source={require('../../../media/images/ic_back.png')} />
                 <Text style={styles.text1}>Orders</Text>
                 <Text>   </Text>
             </View>
