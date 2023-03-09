@@ -36,6 +36,7 @@ const News1 = () =>{
     <Stack.Navigator initialRouteName='Shop' screenOptions={{headerShown:false}}>
     <Stack.Screen name="Shop" component={Shop} />
     <Stack.Screen name="Category" component={Category} />
+    <Stack.Screen name="CategoryDetail" component={CategoryDetail} />
     </Stack.Navigator>
   )
 }

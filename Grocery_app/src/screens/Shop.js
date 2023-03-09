@@ -10,6 +10,9 @@ const Shop = (props) => {
   const Click = () =>{
     navigation.navigate('Category');
   } 
+  const Click2 = () =>{
+    navigation.navigate('CategoryDetail');
+  } 
 
   //renderItemCategories
   const renderItemCategories = (props) => {
@@ -122,7 +125,7 @@ const Shop = (props) => {
         <Text style={styles.PopularDeals}>
           Popular deals
         </Text >
-        <TouchableOpacity onPress={Click}>
+        <TouchableOpacity onPress={Click2}>
         <Text style={styles.seeAll}>
           see all
         </Text>
