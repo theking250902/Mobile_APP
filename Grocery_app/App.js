@@ -19,25 +19,24 @@ import Register1 from './src/screens/Register1';
 import Register2 from './src/screens/Register2';
 import Register3 from './src/screens/Register3';
 import Screen3 from './src/components/app/screens/Screen3';
+import Profile from './src/components/app/screens/Profile';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
-//    <NavigationContainer>
-//     {/* <Navigation/> */}
-//     <Stack.Navigator initialRouteName='Login' screenOptions={{headerShown:false}}>
+   <NavigationContainer>
+    {/* <Navigation/> */}
+    <Stack.Navigator initialRouteName='Login' screenOptions={{headerShown:false}}>
  
-//     <Stack.Screen name="Login" component={Login} />
-//     <Stack.Screen name="Register1" component={Register1} />
-//     <Stack.Screen name="Register2" component={Register2} />
-//     <Stack.Screen name="Register3" component={Register3} />
-//     <Stack.Screen name="Navigation" component={Navigation} />
+    <Stack.Screen name="Login" component={Login} />
+    <Stack.Screen name="Register1" component={Register1} />
+    <Stack.Screen name="Register2" component={Register2} />
+    <Stack.Screen name="Register3" component={Register3} />
+    <Stack.Screen name="Navigation" component={Navigation} />
 
-//     </Stack.Navigator>
-//    </NavigationContainer>
-<View>
-    <Screen3/>
-</View>
+    </Stack.Navigator>
+   </NavigationContainer>
+
   )
 }
 
