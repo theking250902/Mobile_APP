@@ -30,6 +30,8 @@ import ChangePassWord from '../compoment03/ChangePassWord';
 import Itemes from '../components04/app/sales/screens/Itemes';
 import EditProfile from '../compoment03/EditProfile';
 import Ongoing from '../component1/Ongoing';
+import Profile from '../components/app/screens/Profile';
+import NewCard from '../compoment03/NewCard';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -59,6 +61,7 @@ const News5 = () =>{
   return(
     <Stack.Navigator initialRouteName='Screen5' screenOptions={{headerShown:false}}>
     <Stack.Screen name="Screen5" component={Screen5} />
+    <Stack.Screen name="Profile" component={Profile} />
     <Stack.Screen name="CartItem" component={CartItem} />
     <Stack.Screen name="Orders" component={Orders} />
     <Stack.Screen name="Address" component={Address} />
@@ -67,6 +70,8 @@ const News5 = () =>{
     <Stack.Screen name="ProductDetail" component={ProductDetail} />
     <Stack.Screen name="Itemes" component={Itemes} />
     <Stack.Screen name="EditProfile" component={EditProfile} />
+    <Stack.Screen name="Change" component={ChangePassWord} />
+    <Stack.Screen name="NewCard" component={NewCard} />
     </Stack.Navigator>
   )
 }

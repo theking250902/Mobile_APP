@@ -2,7 +2,8 @@ import { StyleSheet, Text, View, Image, StatusBar, TouchableOpacity, Dimensions,
 import React from 'react'
 import ProductItem from '../components02/ProductItem'
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
+  
   return (
     <View style={styles.container}>
       <ScrollView nestedScrollEnabled={true} showsVerticalScrollIndicator={false}>

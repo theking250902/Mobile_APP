@@ -64,8 +64,10 @@ export default ChangePassWord;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    marginStart: 24,
-    marginEnd: 24,
+    paddingStart: 24,
+    paddingEnd: 24,
+    backgroundColor:'#FFFFFF',
+    flex:1
   },
   textPassword: {
     fontWeight: '700',
@@ -77,7 +79,7 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 48,
-    borderWidth: 1,
+    
     borderRadius: 5,
     marginTop: 51,
     backgroundColor: '#F3F3F3',
@@ -98,14 +100,14 @@ const styles = StyleSheet.create({
   },
   textInput1: {
     height: 48,
-    borderWidth: 1,
+   
     borderRadius: 5,
     marginTop: 43,
     backgroundColor: '#F3F3F3',
   },
   textInput2: {
     height: 48,
-    borderWidth: 1,
+  
     borderRadius: 5,
     marginTop: 8,
     backgroundColor: '#F3F3F3',
@@ -144,19 +146,21 @@ const styles = StyleSheet.create({
     marginTop: 14,
   },
   textNut2: {
-    height: 80,
+    height: 48,
     marginTop: 20,
     backgroundColor: '#FFF',
+    borderWidth:1,
+    borderColor:'orange',borderRadius:99
   },
   textNut3: {
     color: '#FF5E00',
     fontWeight: '600',
     fontSize: 16,
     textAlign: 'center',
-    marginTop: 14,
-    borderWidth: 1,
-    borderRadius: 30,
-    padding: 12,
-    borderColor: '#FF5E00',
+    top:10
+   
+  
+
+   
   },
 });

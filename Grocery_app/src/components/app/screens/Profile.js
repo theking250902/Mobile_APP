@@ -1,7 +1,8 @@
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const Profile = () => {
+const Profile = (props) => {
+    const {navigation}=props;
     return (
         <View style={styles.container}>
 
@@ -12,7 +13,7 @@ const Profile = () => {
             </View>
 
             <View style={{ marginTop: 50 }}>
-                <View style={{ flexDirection: 'row' }}>
+                <TouchableOpacity style={{ flexDirection: 'row' }} onPress={()=>navigation.navigate('EditProfile')}>
                     <View style={{ width: 25, alignItems: 'center' }}>
                         <Image style={styles.imageItem} source={require('../../../media/images/account.png')} />
                     </View>
@@ -20,9 +21,9 @@ const Profile = () => {
                     <View style={{ marginStart: 136, marginTop: 6 }}>
                         <Image source={require('../../../media/images/backright.png')} />
                     </View>
-                </View>
+                </TouchableOpacity>
 
-                <View style={{ flexDirection: 'row', marginTop: 33 }}>
+                <TouchableOpacity style={{ flexDirection: 'row', marginTop: 33 }} onPress={()=>navigation.navigate('Change')}>
                     <View style={{ width: 25, alignItems: 'center' }}>
                         <Image style={styles.imageItem} source={require('../../../media/images/cp.png')} />
                     </View>
@@ -30,9 +31,9 @@ const Profile = () => {
                     <View style={{ marginStart: 136, marginTop: 6 }}>
                         <Image source={require('../../../media/images/backright.png')} />
                     </View>
-                </View>
+                </TouchableOpacity>
 
-                <View style={{ flexDirection: 'row', marginTop: 33 }}>
+                <TouchableOpacity style={{ flexDirection: 'row', marginTop: 33 }} onPress={()=>navigation.navigate('NewCard')}>
                     <View style={{ width: 25, alignItems: 'center' }}>
                         <Image style={styles.imageItem} source={require('../../../media/images/mc.png')} />
                     </View>
@@ -40,7 +41,7 @@ const Profile = () => {
                     <View style={{ marginStart: 136, marginTop: 6 }}>
                         <Image source={require('../../../media/images/backright.png')} />
                     </View>
-                </View>
+                </TouchableOpacity>
 
                 <Text style={styles.text3}>App Settings</Text>
 

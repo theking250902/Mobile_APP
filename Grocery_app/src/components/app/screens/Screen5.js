@@ -18,7 +18,7 @@ const Screen5 = (props) => {
 
       <View style={{ marginTop: 50 }}>
         
-        <Pressable onPress={() => navigation.navigate('EditProfile')}>
+        <Pressable onPress={() => navigation.navigate('Profile')}>
           <View style={{ flexDirection: 'row' }}>
             <View style={{ width: 25, alignItems: 'center' }}>
               <Image style={styles.imageItem} source={require('../../../media/images/ic_profile.png')} />

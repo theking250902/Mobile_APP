@@ -13,7 +13,7 @@ const NewCard = () => {
     <View style={styles.container}>
       <Image
         style={styles.imageIconArrow}
-        source={require('./images/arrow.png')}
+        source={require('../images/arrow.png')}
       />
       <Text style={styles.textCard}>New Card</Text>
       <View style={styles.textInput2}>

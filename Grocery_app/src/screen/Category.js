@@ -1,9 +1,13 @@
-import { StyleSheet, Text, View, StatusBar, Dimensions, Image, TextInput } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, Dimensions, Image, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { FlatList } from 'react-native-gesture-handler'
 import CategoryItem from '../components02/CategoryItem'
 
+
+
 const Category = () => {
+    
+   
     return (
         <View style={styles.container}>
             <StatusBar
@@ -12,7 +16,10 @@ const Category = () => {
                 backgroundColor={'transparent'} />
             <Text style={styles.title}>Categories</Text>
             <View style={styles.searchView}>
+                <TouchableOpacity >
                 <Image source={require('../image/search.png')} />
+                </TouchableOpacity>
+               
                 <TextInput style={styles.textInput} placeholder='Search' placeholderTextColor="#6D380591" />
             </View>
 

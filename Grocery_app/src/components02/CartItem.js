@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import { Swipeable, GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const CartItem = (props) => {
-    const {navigation} = props;
-    const { data,onIncrement,onDecrement,onDelete } = props;
-    const Click = () =>{
+    const { navigation } = props;
+    const { data, onIncrement, onDecrement, onDelete } = props;
+    const Click = () => {
         navigation.navigate('ProductDetail');
     }
     const rightSwipe = () => {
@@ -18,35 +18,37 @@ const CartItem = (props) => {
     }
 
     return (
-        <TouchableOpacity onPress={Click}>
-             <GestureHandlerRootView>
-            <Swipeable renderRightActions={rightSwipe}>
-                <View style={styles.container}>
-                    <View style={styles.imgView}>
-                        <Image source={require('../image/strawberry.png')} />
-                    </View>
-                    <View style={styles.centerView}>
-                        <Text style={styles.productName}>{data.name}</Text>
-                        <View style={styles.controlView}>
-                            <TouchableOpacity style={styles.btnUpDown} onPress={onDecrement}>
-                                <Text style={styles.textBtn}>-</Text>
-                            </TouchableOpacity>
-                            <Text style={styles.quantityText}>{data.quantity}</Text>
-                            <TouchableOpacity style={styles.btnUpDown} onPress={onIncrement}>
-                                <Text style={styles.textBtn}>+</Text>
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                    <View style={styles.priceView}>
-                        <Text style={styles.priceText}>$24</Text>
-                        <Text style={styles.unit}>st</Text>
-                    </View>
 
-                </View>
+        <GestureHandlerRootView>
+            <Swipeable renderRightActions={rightSwipe}>
+                <TouchableOpacity onPress={Click}>
+                    <View style={styles.container}>
+                        <View style={styles.imgView}>
+                            <Image source={require('../image/strawberry.png')} />
+                        </View>
+                        <View style={styles.centerView}>
+                            <Text style={styles.productName}>{data.name}</Text>
+                            <View style={styles.controlView}>
+                                <TouchableOpacity style={styles.btnUpDown} onPress={onDecrement}>
+                                    <Text style={styles.textBtn}>-</Text>
+                                </TouchableOpacity>
+                                <Text style={styles.quantityText}>{data.quantity}</Text>
+                                <TouchableOpacity style={styles.btnUpDown} onPress={onIncrement}>
+                                    <Text style={styles.textBtn}>+</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                        <View style={styles.priceView}>
+                            <Text style={styles.priceText}>$24</Text>
+                            <Text style={styles.unit}>st</Text>
+                        </View>
+
+                    </View>
+                </TouchableOpacity>
             </Swipeable>
         </GestureHandlerRootView>
-        </TouchableOpacity>
-       
+
+
     )
 }
 
