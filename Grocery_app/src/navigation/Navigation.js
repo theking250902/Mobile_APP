@@ -3,6 +3,7 @@ import React from 'react'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Address  from '../component1/Address'
 import Orders  from '../component1/Orders'
@@ -27,9 +28,13 @@ import CategoryDetail from '../screen/CategoryDetail';
 import ProductDetail from '../screen/ProductDetail';
 import ChangePassWord from '../compoment03/ChangePassWord';
 import Itemes from '../components04/app/sales/screens/Itemes';
+import EditProfile from '../compoment03/EditProfile';
+import Ongoing from '../component1/Ongoing';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+const Tabb = createMaterialTopTabNavigator();
+
 
 const News1 = () =>{
   return(
@@ -61,7 +66,16 @@ const News5 = () =>{
     <Stack.Screen name="Payment" component={Payment} />
     <Stack.Screen name="ProductDetail" component={ProductDetail} />
     <Stack.Screen name="Itemes" component={Itemes} />
+    <Stack.Screen name="EditProfile" component={EditProfile} />
     </Stack.Navigator>
+  )
+}
+const New6 = () =>{
+  return(
+    <Tabb.Navigator>
+      <Tabb.Screen name="Ongoing" component={Ongoing} />
+      <Tabb.Screen name="Orders" component={Orders} />
+    </Tabb.Navigator>
   )
 }
 const Navigation = () => {

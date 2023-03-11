@@ -13,19 +13,19 @@ const EditProfile = () => {
     <View style={styles.container}>
       <Image
         style={styles.imageIconArrow}
-        source={require('./images/arrow.png')}
+        source={require('../images/arrow.png')}
       />
       <Text style={styles.textCard}>Edit Profile</Text>
-      <TextInput style={styles.textInput}></TextInput>
+      <TextInput placeholder='  mati egh' style={styles.textInput}></TextInput>
       <View>
-        <TextInput style={styles.textInput1}></TextInput>
+        <TextInput placeholder='                    +46 707 07 07' style={styles.textInput1}></TextInput>
         <Image
           style={styles.imageIconFlag}
-          source={require('./images/flag.png')}
+          source={require('../images/flag.png')}
         />
         <Image
           style={styles.imageIconVector2}
-          source={require('./images/vector2.png')}
+          source={require('../images/vector2.png')}
         />
       </View>
       <Pressable style={styles.textNut}>
@@ -53,20 +53,18 @@ const styles = StyleSheet.create({
     lineHeight: 28.8,
     textAlign: 'center',
     color: '#FF5E00',
-    marginTop: 60.51,
+    marginTop: 55,
   },
   textInput: {
     height: 48,
-    borderWidth: 1,
     borderRadius: 5,
-    backgroundColor: '#F3F3F3',
+    backgroundColor:'#DCDCDC',
     marginTop: 40,
   },
   textInput1: {
     height: 48,
-    borderWidth: 1,
     borderRadius: 5,
-    backgroundColor: '#F3F3F3',
+    backgroundColor: '#DCDCDC',
     marginTop: 40,
   },
   textNut: {
@@ -91,5 +89,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop: 60,
     marginLeft: 57,
+    width:10,
+    height:5
   },
 });
