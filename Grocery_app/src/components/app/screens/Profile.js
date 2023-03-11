@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text, Image } from 'react-native'
 import React from 'react'
 
-const Screen3 = () => {
+const Profile = () => {
     return (
         <View style={styles.container}>
 
@@ -139,4 +139,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default Screen3
+export default Profile
